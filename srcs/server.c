@@ -6,7 +6,7 @@
 /*   By: rmount <rmount@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:03:54 by rmount            #+#    #+#             */
-/*   Updated: 2023/03/27 12:32:09 by rmount           ###   ########.fr       */
+/*   Updated: 2023/03/27 13:40:42 by rmount           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void    make_byte(int bit)
 {
     int byte;
-    int client_pid;
 
     byte = reconstruct(bit);
     if (byte > 0)

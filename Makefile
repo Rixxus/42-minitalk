@@ -6,7 +6,7 @@
 #    By: rmount <rmount@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/27 09:48:08 by rmount            #+#    #+#              #
-#    Updated: 2023/03/27 10:14:01 by rmount           ###   ########.fr        #
+#    Updated: 2023/03/27 13:46:52 by rmount           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ PRINTF = ft_printf/libftprintf.a
 
 RM = rm -f
 
-SRCS = srcs/go.c
+SRCS = srcs/utils.c
 
 all: $(PRINTF)
 	make $(CLIENT)
@@ -28,10 +28,10 @@ $(PRINTF):
 	$(MAKE) -C ./ft_printf
 
 $(CLIENT):
-	$(CC) $(CFLAGS) $(SRCS) $(PRINTF) -o $(CLIENT)
+	$(CC) $(CFLAGS) $(SRCS) srcs/client.c $(PRINTF) -o $(CLIENT)
 
 $(SERVER):
-	$(CC) $(CFLAGS) $(SRCS) $(PRINTF) -o $(SERVER)
+	$(CC) $(CFLAGS) $(SRCS) $(PRINTF) srcs/server.c -o $(SERVER)
 
 clean:
 	$(MAKE) clean -C ./ft_printf
