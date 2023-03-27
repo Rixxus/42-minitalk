@@ -6,7 +6,7 @@
 /*   By: rmount <rmount@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 11:18:50 by rmount            #+#    #+#             */
-/*   Updated: 2023/03/27 12:33:30 by rmount           ###   ########.fr       */
+/*   Updated: 2023/03/27 15:14:36 by rmount           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@
 # include "ft_printf.h"
 
 int		reconstruct(int bit);
-void	deconstruct(int byte, int pid, int bit_num);
+void	deconstruct(int byte, int pid);
 
 #endif

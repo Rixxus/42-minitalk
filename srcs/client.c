@@ -6,7 +6,7 @@
 /*   By: rmount <rmount@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 11:32:33 by rmount            #+#    #+#             */
-/*   Updated: 2023/03/27 12:32:11 by rmount           ###   ########.fr       */
+/*   Updated: 2023/03/27 15:13:53 by rmount           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 void    send(int pid, char *str)
 {
     int i;
-    int client_pid;
 
-    client_pid = getpid();
-    deconstruct(client_pid, pid, 32);
     i = 0;
     while (str[i])
     {
-        deconstruct((unsigned char)str[i], pid, 8);
+        deconstruct(str[i], pid);
         i++;
     }
-    deconstruct(0, pid, 8);
+    deconstruct(0, pid);
 }
 
 /*
