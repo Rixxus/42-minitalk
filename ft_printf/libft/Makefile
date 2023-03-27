@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rmount <rmount@student.42.fr>              +#+  +:+       +#+         #
+#    By: rmount <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/28 14:49:46 by rmount            #+#    #+#              #
-#    Updated: 2022/09/26 08:32:30 by rmount           ###   ########.fr        #
+#    Updated: 2022/03/02 08:54:09 by rmount           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-CC		= gcc
+CC		= gcc -I ../headers
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
 
