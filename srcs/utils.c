@@ -6,13 +6,13 @@
 /*   By: rmount <rmount@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:18:04 by rmount            #+#    #+#             */
-/*   Updated: 2023/03/27 15:13:48 by rmount           ###   ########.fr       */
+/*   Updated: 2023/03/31 14:35:05 by rmount           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int reconstruct(int bit)
+int	reconstruct(int bit)
 {
 	static int		byte;
 	static int		i;
@@ -22,7 +22,7 @@ int reconstruct(int bit)
 	{
 		bit = 1;
 	}
-	else 
+	else
 	{
 		bit = 0;
 	}
@@ -38,10 +38,10 @@ int reconstruct(int bit)
 	return (-1);
 }
 
-void    deconstruct(int byte, int pid)
+void	deconstruct(int byte, int pid)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (byte || i < 8)
 	{
@@ -53,7 +53,7 @@ void    deconstruct(int byte, int pid)
 		{
 			kill(pid, SIGUSR2);
 		}
-		byte >> 1;
+		byte >>= 1;
 		usleep(100);
 		i++;
 	}

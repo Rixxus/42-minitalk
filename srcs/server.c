@@ -6,37 +6,37 @@
 /*   By: rmount <rmount@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:03:54 by rmount            #+#    #+#             */
-/*   Updated: 2023/03/27 15:13:51 by rmount           ###   ########.fr       */
+/*   Updated: 2023/03/31 14:32:49 by rmount           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void    make_byte(int bit)
+void	make_byte(int bit)
 {
-    int byte;
+	int	byte;
 
-    byte = reconstruct(bit);
-    if (byte > 0)
-    {
-        ft_printf("%c", byte);
-    }
-    if (!byte) 
-    {
-        ft_printf("\n");
-    }
+	byte = reconstruct(bit);
+	if (byte > 0)
+	{
+		ft_printf("%c", byte);
+	}
+	if (!byte)
+	{
+		ft_printf("\n");
+	}
 }
 
-int main(void)
+int	main(void)
 {
-    int pid;
+	int	pid;
 
-    pid = getpid();
-    ft_printf("The server's PID is:%i\n", pid);
-    signal(SIGUSR1, &make_byte);
-    signal(SIGUSR2, &make_byte);
-    while (1)
-    {
-        pause();
-    }
+	pid = getpid();
+	ft_printf("The server's PID is:%i\n", pid);
+	signal(SIGUSR1, &make_byte);
+	signal(SIGUSR2, &make_byte);
+	while (1)
+	{
+		pause();
+	}
 }
